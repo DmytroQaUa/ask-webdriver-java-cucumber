@@ -1,0 +1,155 @@
+<html>
+<head>
+<title>predefined.feature</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #bbb529;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #cc7832;}
+.s3 { color: #a9b7c6;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+predefined.feature</font>
+</center></td></tr></table>
+<pre><span class="s0">@predefined</span>
+<span class="s2">Feature</span><span class="s1">: </span><span class="s3">Smoke steps</span>
+
+  <span class="s0">@predefined1</span>
+  <span class="s2">Scenario</span><span class="s1">: </span><span class="s3">Predefined steps for Google</span>
+    <span class="s2">Given </span><span class="s3">I open url &quot;https://google.com&quot;</span>
+    <span class="s2">Then </span><span class="s3">I should see page title as &quot;Google&quot;</span>
+    <span class="s2">Then </span><span class="s3">element with xpath &quot;//input[@name='q']&quot; should be present</span>
+    <span class="s2">When </span><span class="s3">I type &quot;Behavior Driven Development&quot; into element with xpath &quot;//input[@name='q']&quot;</span>
+    <span class="s2">Then </span><span class="s3">I click on element using JavaScript with xpath &quot;(//input[@name='btnK'])[1]&quot;</span>
+    <span class="s2">Then </span><span class="s3">I wait for element with xpath &quot;//*[@id='res']&quot; to be present</span>
+    <span class="s2">Then </span><span class="s3">element with xpath &quot;//*[@id='res']&quot; should contain text &quot;Cucumber&quot;</span>
+
+    <span class="s0">@predefined2</span>
+    <span class="s2">Scenario</span><span class="s1">: </span><span class="s3">Predefined steps for Gibiru</span>
+      <span class="s2">Given </span><span class="s3">I open url &quot;https://gibiru.com/&quot;</span>
+      <span class="s2">And </span><span class="s3">I wait for 2 sec</span>
+      <span class="s2">Then </span><span class="s3">I should see page title as &quot;Gibiru – Protecting your privacy since 2009&quot;</span>
+      <span class="s2">Then </span><span class="s3">element with xpath &quot;//input[@id='q']&quot; should be present</span>
+      <span class="s2">When </span><span class="s3">I type &quot;Behavior Driven Development&quot; into element with xpath &quot;//input[@id='q']&quot;</span>
+      <span class="s2">Then </span><span class="s3">I click on element with xpath &quot;//button[@id='button-addon2'][@type='submit']&quot;</span>
+      <span class="s2">Then </span><span class="s3">I wait for element with xpath &quot;//*[@id='web-results']&quot; to be present</span>
+      <span class="s2">Then </span><span class="s3">element with xpath &quot;//*[@id='web-results']&quot; should contain text &quot;Behavior Driven Development&quot;</span>
+
+    <span class="s0">@predefined3</span>
+    <span class="s2">Scenario</span><span class="s1">: </span><span class="s3">Predefined steps for DuckDuckGo</span>
+      <span class="s2">Given </span><span class="s3">I open url &quot;https://duckduckgo.com/&quot;</span>
+      <span class="s2">And </span><span class="s3">I wait for 2 sec</span>
+      <span class="s2">Then </span><span class="s3">I should see page title as &quot;DuckDuckGo — Privacy, simplified.&quot;</span>
+      <span class="s2">Then </span><span class="s3">element with xpath &quot;//input[@id='search_form_input_homepage']&quot; should be present</span>
+      <span class="s2">When </span><span class="s3">I type &quot;software quality assurance&quot; into element with xpath &quot;//input[@id='search_form_input_homepage']&quot;</span>
+      <span class="s2">Then </span><span class="s3">I click on element with xpath &quot;//input[@id='search_button_homepage']&quot;</span>
+      <span class="s2">Then </span><span class="s3">I wait for element with xpath &quot;//*[@id='links_wrapper']&quot; to be present</span>
+      <span class="s2">Then </span><span class="s3">element with xpath &quot;//*[@id='links_wrapper']&quot; should contain text &quot;software quality assurance&quot;</span>
+
+    <span class="s0">@predefined4</span>
+    <span class="s2">Scenario</span><span class="s1">: </span><span class="s3">Predefined steps for SwissCows</span>
+      <span class="s2">Given </span><span class="s3">I open url &quot;https://swisscows.com/&quot;</span>
+      <span class="s2">Then </span><span class="s3">I wait for 2 sec</span>
+      <span class="s2">Then </span><span class="s3">I should see page title as &quot;Swisscows the alternative, data secure search engine.&quot;</span>
+      <span class="s2">Then </span><span class="s3">element with xpath &quot;//*[@name='query'][@placeholder='Your search. Your business.']&quot; should be present</span>
+      <span class="s2">When </span><span class="s3">I type &quot;software quality assurance&quot; into element with xpath &quot;//*[@name='query'][@placeholder='Your search. Your business.']&quot;</span>
+      <span class="s2">Then </span><span class="s3">I click on element with xpath &quot;//*[@class='search-submit']&quot;</span>
+      <span class="s2">Then </span><span class="s3">I wait for element with xpath &quot;//*[@class='page-results']&quot; to be present</span>
+      <span class="s2">Then </span><span class="s3">element with xpath &quot;//*[@class='page-results']&quot; should contain text &quot;software quality assurance&quot;</span>
+
+    <span class="s0">@predefined5</span>
+    <span class="s2">Scenario</span><span class="s1">: </span><span class="s3">Predefined steps for Search Encrypt</span>
+      <span class="s2">Given </span><span class="s3">I open url &quot;https://www.searchencrypt.com/&quot;</span>
+      <span class="s2">Then </span><span class="s3">I wait for 2 sec</span>
+      <span class="s2">Then </span><span class="s3">I should see page title as &quot;Search Encrypt | Home&quot;</span>
+      <span class="s2">Then </span><span class="s3">element with xpath &quot;//*[@name='q'][@placeholder='Search...']&quot; should be present</span>
+      <span class="s2">When </span><span class="s3">I type &quot;software quality assurance&quot; into element with xpath &quot;//*[@name='q'][@placeholder='Search...']&quot;</span>
+      <span class="s2">Then </span><span class="s3">I click on element with xpath &quot;//button[@class='search-bar__submit'][@type='submit']&quot;</span>
+      <span class="s2">Then </span><span class="s3">I wait for element with xpath &quot;//*[@class='serp__results container']&quot; to be present</span>
+      <span class="s2">Then </span><span class="s3">element with xpath &quot;//*[@class='serp__results container']&quot; should contain text &quot;software quality assurance&quot;</span>
+
+    <span class="s0">@predefined6</span>
+    <span class="s2">Scenario</span><span class="s1">: </span><span class="s3">Predefined steps for Startpage</span>
+      <span class="s2">Given </span><span class="s3">I open url &quot;https://www.startpage.com/&quot;</span>
+      <span class="s2">Then </span><span class="s3">I wait for 2 sec</span>
+      <span class="s2">Then </span><span class="s3">I should see page title as &quot;Startpage - Private Search Engine. No Tracking. No Search History.&quot;</span>
+      <span class="s2">Then </span><span class="s3">element with xpath &quot;//input[@id='q']&quot; should be present</span>
+      <span class="s2">When </span><span class="s3">I type &quot;software quality assurance&quot; into element with xpath &quot;//input[@id='q']&quot;</span>
+      <span class="s2">Then </span><span class="s3">I click on element with xpath &quot;//button[@class='search-form-home__button-desktop'][@type='submit']&quot;</span>
+      <span class="s2">Then </span><span class="s3">I wait for element with xpath &quot;//*[@class='layout-web layout-web--']&quot; to be present</span>
+      <span class="s2">Then </span><span class="s3">element with xpath &quot;//*[@class='layout-web layout-web--']&quot; should contain text &quot;software quality assurance&quot;</span>
+
+    <span class="s0">@predefined7</span>
+    <span class="s2">Scenario</span><span class="s1">: </span><span class="s3">Predefined steps for Wikipedia</span>
+      <span class="s2">Given </span><span class="s3">I open url &quot;https://en.wikipedia.org/&quot;</span>
+      <span class="s2">Then </span><span class="s3">I wait for 2 sec</span>
+      <span class="s2">Then </span><span class="s3">I should see page title as &quot;Wikipedia, the free encyclopedia&quot;</span>
+      <span class="s2">Then </span><span class="s3">element with xpath &quot;//input[@id='searchInput']&quot; should be present</span>
+      <span class="s2">When </span><span class="s3">I type &quot;software quality assurance&quot; into element with xpath &quot;//input[@id='searchInput']&quot;</span>
+      <span class="s2">Then </span><span class="s3">I click on element with xpath &quot;//input[@id='searchButton']&quot;</span>
+      <span class="s2">Then </span><span class="s3">I wait for element with xpath &quot;//div[@id='content']&quot; to be present</span>
+      <span class="s2">Then </span><span class="s3">element with xpath &quot;//div[@id='content']&quot; should contain text &quot;software quality assurance&quot;</span>
+
+    <span class="s0">@predefined8</span>
+    <span class="s2">Scenario</span><span class="s1">: </span><span class="s3">Predefined steps for ECOSIA</span>
+      <span class="s2">Given </span><span class="s3">I open url &quot;https://www.ecosia.org/&quot;</span>
+      <span class="s2">Then </span><span class="s3">I wait for 2 sec</span>
+      <span class="s2">Then </span><span class="s3">I should see page title as &quot;Ecosia - the search engine that plants trees&quot;</span>
+      <span class="s2">Then </span><span class="s3">element with xpath &quot;//*[@data-test-id='search-form-input'][@type='search']&quot; should be present</span>
+      <span class="s2">When </span><span class="s3">I type &quot;software quality assurance&quot; into element with xpath &quot;//*[@data-test-id='search-form-input'][@type='search']&quot;</span>
+      <span class="s2">Then </span><span class="s3">I click on element with xpath &quot;//*[@data-test-id='search-form-submit']&quot;</span>
+      <span class="s2">Then </span><span class="s3">I wait for element with xpath &quot;//*[@class='mainline-results']&quot; to be present</span>
+      <span class="s2">Then </span><span class="s3">element with xpath &quot;//*[@class='mainline-results']&quot; should contain text &quot;software quality assurance&quot;</span>
+
+    <span class="s0">@predefined9</span>
+    <span class="s2">Scenario</span><span class="s1">: </span><span class="s3">Predefined steps for Wiki</span>
+      <span class="s2">Given </span><span class="s3">I open url &quot;https://www.wiki.com/&quot;</span>
+      <span class="s2">Then </span><span class="s3">I wait for 2 sec</span>
+      <span class="s2">Then </span><span class="s3">I should see page title as &quot;Wiki.com&quot;</span>
+      <span class="s2">Then </span><span class="s3">element with xpath &quot;//*[@name='q']&quot; should be present</span>
+      <span class="s2">When </span><span class="s3">I type &quot;software quality assurance&quot; into element with xpath &quot;//*[@name='q']&quot;</span>
+      <span class="s2">Then </span><span class="s3">I click on element with xpath &quot;//*[@name='btnG']&quot;</span>
+      <span class="s2">And </span><span class="s3">I should see page title as &quot;Form is not secure&quot;</span>
+      <span class="s2">Then </span><span class="s3">I click on element with xpath &quot;//*[@id='proceed-button']&quot;</span>
+      <span class="s2">Then </span><span class="s3">I should see page title as &quot;Wiki.com&quot;</span>
+      <span class="s2">Then </span><span class="s3">I switch to iframe with xpath &quot;//iframe[@name='googleSearchFrame']&quot;</span>
+      <span class="s2">Then </span><span class="s3">I wait for element with xpath &quot;//*[@id='cse-hosted']&quot; to be present</span>
+      <span class="s2">Then </span><span class="s3">element with xpath &quot;//*[@id='cse-hosted']&quot; should contain text &quot;software quality assurance&quot;</span>
+
+    <span class="s0">@predefined10</span>
+    <span class="s2">Scenario</span><span class="s1">: </span><span class="s3">Predefined steps for Givewater</span>
+      <span class="s2">Given </span><span class="s3">I open url &quot;https://www.givewater.com/&quot;</span>
+      <span class="s2">Then </span><span class="s3">I wait for 2 sec</span>
+      <span class="s2">Then </span><span class="s3">I should see page title as &quot;Search the Web to Give Clean Water to Those in Need » giveWater Search Engine&quot;</span>
+      <span class="s2">Then </span><span class="s3">element with xpath &quot;//div[@id='popmake-172']&quot; should be present</span>
+      <span class="s2">Then </span><span class="s3">I click on element with xpath &quot;//*[@type='button'][@aria-label='Close'][@class='pum-close popmake-close']&quot;</span>
+      <span class="s2">Then </span><span class="s3">element with xpath &quot;//input[@id='site-search']&quot; should be present</span>
+      <span class="s2">When </span><span class="s3">I type &quot;software quality assurance&quot; into element with xpath &quot;//input[@id='site-search']&quot;</span>
+      <span class="s2">Then </span><span class="s3">I click on element with xpath &quot;//button[@id='button-addon2']&quot;</span>
+      <span class="s2">Then </span><span class="s3">I wait for element with xpath &quot;//*[@class='layout__body']&quot; to be present</span>
+      <span class="s2">Then </span><span class="s3">element with xpath &quot;//*[@class='layout__body']&quot; should contain text &quot;software quality assurance&quot;</span>
+
+    <span class="s0">@predefined11</span>
+    <span class="s2">Scenario</span><span class="s1">: </span><span class="s3">Predefined steps for Ecoru</span>
+      <span class="s2">Given </span><span class="s3">I open url &quot;https://ekoru.org/&quot;</span>
+      <span class="s2">Then </span><span class="s3">I wait for 2 sec</span>
+      <span class="s2">Then </span><span class="s3">I should see page title as &quot;Ekoru - every search cleans our oceans&quot;</span>
+      <span class="s2">Then </span><span class="s3">element with xpath &quot;//input[@id='fld_q']&quot; should be present</span>
+      <span class="s2">When </span><span class="s3">I type &quot;software quality assurance&quot; into element with xpath &quot;//input[@id='fld_q']&quot;</span>
+      <span class="s2">Then </span><span class="s3">I click on element with xpath &quot;//*[@id='btn_search']&quot;</span>
+      <span class="s2">Then </span><span class="s3">I wait for element with xpath &quot;//div[@class='serp-wrapper']&quot; to be present</span>
+      <span class="s2">Then </span><span class="s3">element with xpath &quot;//div[@class='serp-wrapper']&quot; should contain text &quot;software quality assurance&quot;</span>
+
+
+      
+
+
+
+
+</pre>
+</body>
+</html>

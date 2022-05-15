@@ -1,0 +1,96 @@
+<html>
+<head>
+<title>JavaStepDefs.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+.s3 { color: #6897bb;}
+.s4 { color: #808080;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+JavaStepDefs.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">definitions</span><span class="s0">;</span>
+
+<span class="s0">import </span><span class="s1">cucumber.api.java.en.Given</span><span class="s0">;</span>
+
+<span class="s0">public class </span><span class="s1">JavaStepDefs {</span>
+    <span class="s1">@Given(</span><span class="s2">&quot;I print Hello World&quot;</span><span class="s1">)</span>
+    <span class="s0">public void </span><span class="s1">iPrintHelloWorld() {</span>
+        <span class="s1">System.out.println(</span><span class="s2">&quot;Hello World&quot;</span><span class="s1">)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s1">@Given(</span><span class="s2">&quot;I print {string}&quot;</span><span class="s1">)</span>
+    <span class="s0">public void </span><span class="s1">iPrint(String sWord) {</span>
+        <span class="s1">System.out.println(sWord)</span><span class="s0">;</span>
+
+    <span class="s1">}</span>
+
+    <span class="s1">@Given(</span><span class="s2">&quot;I compare {string} with {string}&quot;</span><span class="s1">)</span>
+    <span class="s0">public void </span><span class="s1">iCompareWith(String sWord1</span><span class="s0">, </span><span class="s1">String sWord2) {</span>
+        <span class="s1">System.out.println(</span><span class="s2">&quot;My first word is &quot; </span><span class="s1">+ sWord1 + </span><span class="s2">&quot; and &quot;</span><span class="s1">+ </span><span class="s2">&quot;my second word is &quot; </span><span class="s1">+ sWord2)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s2">&quot;First char for both strings: &quot;</span><span class="s1">+ sWord1.charAt(</span><span class="s3">0</span><span class="s1">)+</span><span class="s2">&quot;, &quot; </span><span class="s1">+ sWord2.charAt(</span><span class="s3">0</span><span class="s1">))</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s2">&quot;The length of each string: &quot;</span><span class="s1">+ sWord1.length() +</span><span class="s2">&quot;, &quot; </span><span class="s1">+ sWord2.length())</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s2">&quot;Is First string equal to Second : &quot;</span><span class="s1">+ sWord1.equals(sWord2))</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s2">&quot;Is First string equal to Second using ignoring the case: &quot;</span><span class="s1">+ sWord1.equalsIgnoreCase(sWord2))</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s2">&quot;Is First string equal to Second using Upper the case: &quot; </span><span class="s1">+ sWord1.equals(sWord2.toUpperCase()))</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s1">@Given(</span><span class="s2">&quot;I practice with numbers {int} and {int}&quot;</span><span class="s1">)</span>
+    <span class="s0">public void </span><span class="s1">iPracticeWithNumbersAnd(</span><span class="s0">int </span><span class="s1">iNum1</span><span class="s0">, int </span><span class="s1">iNum2) {</span>
+        <span class="s0">int </span><span class="s1">iSum = iNum1 + iNum2</span><span class="s0">;</span>
+        <span class="s0">int </span><span class="s1">iDif = iNum1 - iNum2</span><span class="s0">;</span>
+        <span class="s0">int </span><span class="s1">iProd = iNum1 * iNum2</span><span class="s0">;</span>
+        <span class="s0">int </span><span class="s1">iQuot = iNum1 / iNum2</span><span class="s0">;</span>
+
+        <span class="s1">System.out.println(iNum1 + </span><span class="s2">&quot; + &quot;</span><span class="s1">+ iNum2 + </span><span class="s2">&quot; = &quot; </span><span class="s1">+ iSum)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(iNum1 + </span><span class="s2">&quot; - &quot;</span><span class="s1">+ iNum2 + </span><span class="s2">&quot; = &quot; </span><span class="s1">+ iDif)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(iNum1 + </span><span class="s2">&quot; * &quot;</span><span class="s1">+ iNum2 + </span><span class="s2">&quot; = &quot; </span><span class="s1">+ iProd)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(iNum1 + </span><span class="s2">&quot; / &quot;</span><span class="s1">+ iNum2 + </span><span class="s2">&quot; = &quot; </span><span class="s1">+ iQuot)</span><span class="s0">;</span>
+
+
+    <span class="s1">}</span>
+
+    <span class="s1">@Given(</span><span class="s2">&quot;I print url for {string} page&quot;</span><span class="s1">)</span>
+    <span class="s0">public void </span><span class="s1">iPrintUrlForPage(String sURL) {</span>
+        <span class="s4">/*if (sURL.equals(&quot;google&quot;)){ 
+            System.out.println(&quot;https://www.google.com/&quot;); 
+            } 
+        else if (sURL.equals(&quot;duckduckgo&quot;)) { 
+            System.out.println(&quot;https://duckduckgo.com&quot;); 
+        } 
+        else { 
+            System.out.println(&quot;No URL found&quot;); 
+        }*/</span>
+        <span class="s0">switch </span><span class="s1">(sURL){</span>
+            <span class="s0">case </span><span class="s2">&quot;google&quot;</span><span class="s1">: System.out.println(</span><span class="s2">&quot;https://www.google.com/&quot;</span><span class="s1">)</span><span class="s0">;break;</span>
+            <span class="s0">case </span><span class="s2">&quot;duckduckgo&quot;</span><span class="s1">: System.out.println(</span><span class="s2">&quot;https://duckduckgo.com&quot;</span><span class="s1">)</span><span class="s0">;break;</span>
+            <span class="s0">case </span><span class="s2">&quot;swisscows&quot;</span><span class="s1">: System.out.println(</span><span class="s2">&quot;https://swisscows.com&quot;</span><span class="s1">)</span><span class="s0">;break;</span>
+            <span class="s0">case </span><span class="s2">&quot;searchencrypt&quot;</span><span class="s1">: System.out.println(</span><span class="s2">&quot;https://www.searchencrypt.com&quot;</span><span class="s1">)</span><span class="s0">;break;</span>
+            <span class="s0">default</span><span class="s1">: System.out.println(</span><span class="s2">&quot;No URL found&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s1">System.out.println(</span><span class="s2">&quot;The selection is completed!&quot;</span><span class="s1">)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s1">@Given(</span><span class="s2">&quot;I practice with array operations&quot;</span><span class="s1">)</span>
+    <span class="s0">public void </span><span class="s1">iPracticeWithArrayOperations() {</span>
+        <span class="s0">int</span><span class="s1">[] numbers = {</span><span class="s3">5</span><span class="s0">,</span><span class="s3">8</span><span class="s0">,</span><span class="s3">5</span><span class="s0">,</span><span class="s3">9</span><span class="s0">,</span><span class="s3">1</span><span class="s0">,</span><span class="s3">4</span><span class="s1">}</span><span class="s0">;</span>
+        <span class="s1">String[] cars = {</span><span class="s2">&quot;Ford&quot;</span><span class="s0">, </span><span class="s2">&quot;Toyota&quot;</span><span class="s0">, </span><span class="s2">&quot;BMW&quot;</span><span class="s0">, </span><span class="s2">&quot;others&quot;</span><span class="s1">}</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s2">&quot;The first car is &quot; </span><span class="s1">+ cars[</span><span class="s3">0</span><span class="s1">])</span><span class="s0">;</span>
+        <span class="s0">for </span><span class="s1">(</span><span class="s0">int </span><span class="s1">i = </span><span class="s3">0</span><span class="s0">; </span><span class="s1">i&lt;=</span><span class="s3">3</span><span class="s0">; </span><span class="s1">i++) {</span>
+            <span class="s1">System.out.println(</span><span class="s2">&quot;Print cars &quot; </span><span class="s1">+ cars[i])</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s1">System.out.println(</span><span class="s2">&quot;Amount of the cars &quot; </span><span class="s1">+ cars.length)</span><span class="s0">;</span>
+        <span class="s1">System.out.println (</span><span class="s2">&quot;I have &quot; </span><span class="s1">+ numbers[</span><span class="s3">1</span><span class="s1">] +</span><span class="s2">&quot; &quot; </span><span class="s1">+ cars[</span><span class="s3">1</span><span class="s1">])</span><span class="s0">;</span>
+
+    <span class="s1">}</span>
+<span class="s1">}</span>
+</pre>
+</body>
+</html>
